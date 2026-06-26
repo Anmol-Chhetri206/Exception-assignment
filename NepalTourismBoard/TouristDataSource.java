@@ -1,3 +1,4 @@
+package NepalTourismBoard;
 import java.util.List;
 public abstract class TouristDataSource
 {
@@ -6,12 +7,16 @@ public abstract class TouristDataSource
     {
         this.sourceName = srcName;
     }
-     public abstract void fetchData(List<String> data) throws DataSourceAccessException;
+    public abstract List<String> fetchData() throws DataSourceAccessException;
+      public static void main(String[] args) 
+    {
+        
+    } 
+}
 class DataSourceAccessException extends Exception
 {
     public DataSourceAccessException(String message)
     {
         super(message);
     }
-}
 }
